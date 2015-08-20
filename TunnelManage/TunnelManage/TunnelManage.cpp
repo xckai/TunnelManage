@@ -8,9 +8,7 @@ using namespace std;
 
 class FunctionManage
 {
-
 public:
-
 	static int GapCalcute(int w,int x,int l,int r,WCHAR *resultBuffer)
 	{
 		wstring result=L""; 
@@ -40,6 +38,29 @@ public:
 			lstrcpyW(resultBuffer, exceptionResult.c_str());
 			return exceptionResult.size();
 		}
+	}
+
+	static bool IsFileExit(const string name)
+	{
+		if (FILE *file = fopen(name.c_str(), "r")) {
+				fclose(file);
+				return true;
+			}
+			else {
+				return false;
+			}
+	}
+	static int CreateMyFile(const string str)
+	{
+		FILE *file = fopen(str.c_str(), "w");
+		auto result= fclose(file);
+		
+		if (0==result)
+		{
+			return 0;
+		}else{
+			return 1;
+		}		
 	}
 }functionManage;
 extern"C"_declspec(dllexport) int  GapCalculate(int w,int x,int l,int r,WCHAR * buffer)
