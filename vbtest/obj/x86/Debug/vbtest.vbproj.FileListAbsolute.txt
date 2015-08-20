@@ -16,3 +16,6 @@ d:\Users\kai.xu.CN1\Desktop\TunnelManage\vbtest\bin\x86\Debug\vbtest.xml
 d:\Users\kai.xu.CN1\Desktop\TunnelManage\vbtest\obj\x86\Debug\vbtest.Form1.resources
 d:\Users\kai.xu.CN1\Desktop\TunnelManage\vbtest\obj\x86\Debug\vbtest.Resources.resources
 d:\Users\kai.xu.CN1\Desktop\TunnelManage\vbtest\obj\x86\Debug\vbtest.vbproj.GenerateResource.Cache
+E:\github\TunnelManage\vbtest\obj\x86\Debug\vbtest.exe
+E:\github\TunnelManage\vbtest\obj\x86\Debug\vbtest.xml
+E:\github\TunnelManage\vbtest\obj\x86\Debug\vbtest.pdb

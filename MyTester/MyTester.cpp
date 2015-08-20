@@ -3,6 +3,7 @@
 
 #include "stdafx.h"
 #include "TunnelManage.cpp"
+//#include <iostream>
 
 int _tmain(int argc, _TCHAR* argv[])
 {
