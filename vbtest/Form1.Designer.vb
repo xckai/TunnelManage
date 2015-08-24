@@ -31,6 +31,8 @@ Partial Class Form1
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.Btn_Authorized = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'GapCal
@@ -106,11 +108,31 @@ Partial Class Form1
         Me.Label4.TabIndex = 8
         Me.Label4.Text = "R"
         '
+        'Btn_Authorized
+        '
+        Me.Btn_Authorized.Location = New System.Drawing.Point(30, 94)
+        Me.Btn_Authorized.Name = "Btn_Authorized"
+        Me.Btn_Authorized.Size = New System.Drawing.Size(75, 23)
+        Me.Btn_Authorized.TabIndex = 9
+        Me.Btn_Authorized.Text = "验证授权"
+        Me.Btn_Authorized.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(211, 93)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 10
+        Me.Button1.Text = "生成授权文件"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(598, 261)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.Btn_Authorized)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
@@ -135,5 +157,7 @@ Partial Class Form1
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents Btn_Authorized As System.Windows.Forms.Button
+    Friend WithEvents Button1 As System.Windows.Forms.Button
 
 End Class

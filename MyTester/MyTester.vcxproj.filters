@@ -24,12 +24,30 @@
     <ClInclude Include="targetver.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="..\TunnelManage\TunnelManage\MyAuthorization.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\TunnelManage\TunnelManage\CPUID.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="MyTester.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\TunnelManage\TunnelManage\MyAuthorization.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\TunnelManage\TunnelManage\base64.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\TunnelManage\TunnelManage\base64.h">
+      <Filter>头文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\TunnelManage\TunnelManage\CPUID.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

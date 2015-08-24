@@ -6,6 +6,8 @@
 #include "string"
 #include <fstream>
 #include <windows.h>
+#include <atlstr.h>
+
 using namespace std;
 
 class FunctionManage
@@ -41,77 +43,6 @@ public:
 			return exceptionResult.size();
 		}
 	}
-	static int Authorized(string a,string b,string c){
-		//a 主文件,b 机器码文件, c 授权文件
-		if (IsFileExit(a))
-		{
-			return 8;
-		}else{
-			if (IsFileExit(c))//授权文件存在
-			{
-				if (CheckVerIdFile(c))//验证授权
-				{
-					CreateMyFile(a);
-					RemoveMyFile(c);
-					return 8;//ok
-				}else{
-					RemoveMyFile(c);
-					CreateMyFile(b);
-					return 1;//delete file 
-				}
-
-			}else//授权文件不存在
-			{
-				CreateMyFile(b);//生成机器码
-				return 1;
-			}
-		}
 		
-	}
-	static bool  CheckVerIdFile(string str)
-	{
-
-		return true;
-	}
-	static bool IsFileExit(const string name)
-	{
-		ifstream inFile(name.c_str());
-		if (inFile)
-		{
-			return true;
-		}else{
-			return false;
-		}
-
-	}
-	static bool CreateMyFile(const string str)
-	{
-		ofstream outFile(str.c_str(),ofstream::out|ofstream::binary);
-		if (outFile)
-		{
-			outFile.close();
-			return true;
-		}else
-		{			
-			return false;
-		}
-		
-		
-		
-		
-	}
-	static bool RemoveMyFile(const string str){
-		if (0==remove(str.c_str()))
-		{
-			return true;
-		}else
-		{
-			return false;
-		}
-	}
-}functionManage;
-extern"C"_declspec(dllexport) int  GapCalculate(int w,int x,int l,int r,WCHAR * buffer)
-{
-	return functionManage.GapCalcute(w, x, l, r, buffer);
-}
+};
 
