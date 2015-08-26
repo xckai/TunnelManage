@@ -66,7 +66,7 @@ string CPUID::GetModel()
 	{
 		myBrand[i] += 1;
 	}
-	return 	myBrand;
+	return myBrand;
 	;  // 以string的形式返回
 }
 

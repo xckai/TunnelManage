@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "MyAuthorization.h"
 #include "CPUID.h"
-#include "base64.h"
+#include "StringEncode.h"
 Authorization::Authorization( string _a, string _b, string _c)
 { 
 	a =_a;
@@ -60,7 +60,6 @@ bool Authorization::CheckVerIdFile()
 	inFile >> MyStr;
 	if (MyStr.length()<13)
 	{
-		
 		return false;
 	}
 	string enCodeStr;
@@ -69,7 +68,7 @@ bool Authorization::CheckVerIdFile()
     {
 		enCodeStr += MyStr[i];
     }
-	string decodeStr = base64_decode(enCodeStr);
+	string decodeStr = StringEncode().base64_decode(enCodeStr);
 	string decodeTime,decodeMachineCode;
 	for (int i = 0; i < decodeStr.length() - myTime.length();++i)
 	{
@@ -147,7 +146,8 @@ int Authorization::CreateKeyFile(string fileName,string machineFile)
 		string machineCode;
 		myInfile >> machineCode;
 		string myStr = machineCode + myTime;
-		string myEncodeStr = base64_encode(reinterpret_cast<const unsigned char*>(myStr.c_str()), myStr.length());
+		//string myEncodeStr = base64_encode(reinterpret_cast<const unsigned char*>(myStr.c_str()), myStr.length());
+		string myEncodeStr= StringEncode().base64_encode(myStr);
 		myEncodeStr += "@!$%c";
 		cout << myStr;
 		CreateMyFile(fileName, myEncodeStr);
@@ -162,6 +162,7 @@ bool Authorization::CreateMachineCode()
 {
 	CPUID cpu;
 	string myStr = cpu.GetModel();
+
 	return CreateMyFile(b, myStr);
 
 }
