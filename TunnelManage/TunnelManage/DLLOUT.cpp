@@ -17,22 +17,23 @@ std::string WChar2Ansi(LPCWSTR pwszSrc)
 }
 string ws2s(wstring& inputws){ return WChar2Ansi(inputws.c_str()); }
 FunctionManage functionManage;
-extern"C"_declspec(dllexport) int  GapCalculate(int w, int x, int l, int r, WCHAR * buffer)
+extern"C"_declspec(dllexport) int  GapCalculate(int w, int x, float l, float r, WCHAR * buffer)
 {
 	return functionManage.GapCalcute(w, x, l, r, buffer);
 }
-extern"C"_declspec(dllexport) int  Authorized(LPCWSTR a, LPCWSTR b, LPCWSTR c)
+extern"C"_declspec(dllexport) int  Authorized()
 {
+	/*LPCWSTR a, LPCWSTR b, LPCWSTR c
 	string _a = ws2s((wstring)a);
 	string _b = ws2s((wstring)b);
-	string _c = ws2s((wstring)c);
-	Authorization auth(_a, _b, _c);
+	string _c = ws2s((wstring)c);*/
+	Authorization auth;
 	return auth.Authorized();
 }
 extern"C"_declspec(dllexport)int CreateKey(LPCWSTR a, LPCWSTR b)
-{
+{ //a 读取机器码的路径 b 生成key的路径
 	string _a = ws2s((wstring)a);
 	string _b = ws2s((wstring)b);
-	Authorization auth("", "", "");
+	Authorization auth;
 	return auth.CreateKeyFile(_a, _b);
 }

@@ -1,43 +1,53 @@
-#include "stdafx.h"
+ï»¿#include "stdafx.h"
 #include "MyAuthorization.h"
 #include "CPUID.h"
 #include "StringEncode.h"
+#include <windows.h>
 Authorization::Authorization( string _a, string _b, string _c)
 { 
 	a =_a;
 	b = _b;
 	c = _c;
 }
+Authorization::Authorization()
+{
+  a="c:\\windows\\system32\\yzyyzy.txt";
+  b="c:\\shield\\monitor\\machin_coad.txt";
+  c="c:\\shield\\monitor\\soft_data\\ver_id.txt";
+  a1="c:\\windows\\system32\\yangyupeng.txt";
+
+}
 int Authorization::Authorized(){
 	try {
-		//a Ö÷ÎÄ¼ş,b »úÆ÷ÂëÎÄ¼ş, c ÊÚÈ¨ÎÄ¼ş
+		//a ä¸»æ–‡ä»¶,b æœºå™¨ç æ–‡ä»¶, c æˆæƒæ–‡ä»¶
 		if (IsFileExit(a))
 		{
-			OutputDebugString(L"ÒÑ¾­¹ıÊÚÈ¨");
+			OutputDebugString(L"å·²ç»è¿‡æˆæƒ");
 			return 8;
 		}
 		else{
-			if (IsFileExit(c))//ÊÚÈ¨ÎÄ¼ş´æÔÚ
+			if (IsFileExit(c))//æˆæƒæ–‡ä»¶å­˜åœ¨
 			{
-				if (CheckVerIdFile())//ÑéÖ¤ÊÚÈ¨
+				if (CheckVerIdFile())//éªŒè¯æˆæƒ
 				{
 					CreateMyFile(a);
+					CreateMyFile(a1);
 					RemoveMyFile(c);
-					OutputDebugString(L"ÑéÖ¤ÊÚÈ¨³É¹¦");
+					OutputDebugString(L"éªŒè¯æˆæƒæˆåŠŸ");
 					return 8;//ok
 				}
 				else{
 					RemoveMyFile(c);
 					CreateMachineCode();
-					OutputDebugString(L"ÑéÖ¤ÊÚÈ¨Ê§°Ü");
+					OutputDebugString(L"éªŒè¯æˆæƒå¤±è´¥");
 					return 1;//delete file 
 				}
 
 			}
-			else//ÊÚÈ¨ÎÄ¼ş²»´æÔÚ
+			else//æˆæƒæ–‡ä»¶ä¸å­˜åœ¨
 			{
-				CreateMachineCode();//Éú³É»úÆ÷Âë
-				OutputDebugString(L"Éú³É»úÆ÷Âë");
+				CreateMachineCode();//ç”Ÿæˆæœºå™¨ç 
+				OutputDebugString(L"ç”Ÿæˆæœºå™¨ç ");
 				return 1;
 			}
 		}
@@ -96,37 +106,47 @@ bool Authorization::CheckVerIdFile()
 }
 bool Authorization::IsFileExit(const string name)
 {
+	Wow64EnableWow64FsRedirection(FALSE);
 	ifstream inFile(name.c_str());
 	if (inFile)
 	{
+		Wow64EnableWow64FsRedirection(true);
 		return true;
 	}
 	else{
+		Wow64EnableWow64FsRedirection(true);
 		return false;
 	}
 
 }
 bool Authorization::CreateMyFile(const string str,string content)
 {
+	Wow64EnableWow64FsRedirection(FALSE);
 	ofstream outFile(str.c_str(), ofstream::out | ofstream::binary);
 	if (outFile)
 	{
+
 		outFile << content;
 		outFile.close();
+		Wow64EnableWow64FsRedirection(true);
 		return true;
 	}
 	else
 	{
+			Wow64EnableWow64FsRedirection(true);
 		return false;
 	}
 }
 bool Authorization::RemoveMyFile(const string str){
+	Wow64EnableWow64FsRedirection(false);
 	if (0 == remove(str.c_str()))
 	{
+		Wow64EnableWow64FsRedirection(true);
 		return true;
 	}
 	else
 	{
+		Wow64EnableWow64FsRedirection(true);
 		return false;
 	}
 }
@@ -137,6 +157,7 @@ bool Authorization::IsAuthorized()
 int Authorization::CreateKeyFile(string fileName,string machineFile)
 {
 	try{
+		Wow64EnableWow64FsRedirection(false);
 		SYSTEMTIME sysTime;
 		GetSystemTime(&sysTime);
 		stringstream ss;
@@ -151,10 +172,12 @@ int Authorization::CreateKeyFile(string fileName,string machineFile)
 		myEncodeStr += "@!$%c";
 		cout << myStr;
 		CreateMyFile(fileName, myEncodeStr);
+		Wow64EnableWow64FsRedirection(true);
 		return 0;
 	}
 	catch (exception e)
 	{
+		Wow64EnableWow64FsRedirection(true);
 		return -1;
 	}
 }
