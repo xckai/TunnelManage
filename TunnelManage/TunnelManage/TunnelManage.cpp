@@ -7,19 +7,28 @@
 #include <fstream>
 #include <windows.h>
 #include <atlstr.h>
+#include "MyAuthorization.h"
 
 using namespace std;
 
 class FunctionManage
 {
 public:
-	static int GapCalcute(int w,int x,int l,int r,WCHAR *resultBuffer)
+	static int GapCalcute(int w,int x,float l,float r,WCHAR *resultBuffer)
 	{
 		wstring result=L""; 
 		
-		wstring exceptionResult=L"999,999";
+		wstring exceptionResult=L"9999,9999";
 		try
 		{
+			Authorization auth;
+
+			if (!auth.IsAuthorized())
+			{
+				lstrcpyW(resultBuffer, exceptionResult.c_str());
+				return exceptionResult.size();
+			}
+
 			if ((r+l)!=0 && w!=0)
 			{
 				int _k=(r+l)/w;
