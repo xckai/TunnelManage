@@ -23,8 +23,8 @@ Public Class Form1
         Dim d As Int32
         Dim x As Int32
         Dim strList = resultStr.Split(",")
-        d = Convert.ToInt32(strList(0))
-        x = Convert.ToInt32(strList(1))
+        d = Convert.ToSingle(strList(0))
+        x = Convert.ToSingle(strList(1))
         MessageBox.Show("d is " + strList(0) + "; x is " + strList(1))
 
     End Sub
