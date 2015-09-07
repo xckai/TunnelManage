@@ -20,15 +20,16 @@ int _tmain(int argc, _TCHAR* argv[])
 	//vendor += std::string((const char *)&cpuID.EBX(), 4);
 	//vendor += std::string((const char *)&cpuID.EDX(), 4);
 	//vendor += std::string((const char *)&cpuID.ECX(), 4);
-	CPUID cpu;
-	cout << "CPU ÐÍ ºÅ: " << cpu.GetModel() << endl;
+	//CPUID cpu;
+	//cout << "CPU ÐÍ ºÅ: " << cpu.GetModel() << endl;
 	//std::cout << "CPU vendor = " << vendor << std::endl;
 	//system("wmic path win32_physicalmedia get SerialNumber");
 	////cout << functionManage.IsFileExit("C:\\123\\123.txt");
-	Authorization auth("c:\\1.txt", "c:\\2.txt", "c:\\3.txt");
+	//Authorization auth("c:\\1.txt", "c:\\2.txt", "c:\\3.txt");
 	//auth.Authorized();
 	//auth.CreateKeyFile("c:\\3.txt", "c:\\2.txt");
-	auth.Authorized();
+	//auth.Authorized();
+	
 	return 0;
 }
 

@@ -9,6 +9,7 @@
 #include <atlstr.h>
 #include "MyAuthorization.h"
 #include <vector>
+#include<algorithm>
 
 using namespace std;
 
@@ -54,12 +55,13 @@ public:
 		}
 	}
 	static string  RingCalcute6(int n,int w,int dr,int lxj,int l0,int l1,int l2,int l3,int l4,int l5){
-		int ring=0,jxc=0,erro=0,mymax=0,q=0,m=0,k=0;
+		int ring=0,jxc=0,erro=-1,mymax=-1,k=0;
+		float q = 0, m = 0;
 		string result="";
 		vector<int > lmax,la,lx;
 		lmax.resize(6);
 		la.resize(6);
-		IntilRing("e:\\123.txt",ring,jxc,lmax,la);
+		IntilRing("E:\\github\\TunnelManage\\result.txt",ring,jxc,lmax,la);
 		
 		lx.push_back(l0);lx.push_back(l1);
 		lx.push_back(l2);lx.push_back(l3);
@@ -71,17 +73,39 @@ public:
 		}
 		if (lxj==1)
 		{
-			for (int i=0;i<6;++i)
+			int t_max = -1,t_min = -1;
+			int t_max_val = -1, t_min_val = -1;
+			float t_midvalue = 0;
+			vector<int>t_vec = lx;
+			sort(t_vec.begin(), t_vec.end());
+			int acc = 0;
+			for (int i=1;i<t_vec.size()-1;++i)
 			{
-				if (lx.at(erro)>lx.at(i))
+				acc +=t_vec[i];
+			}
+			t_midvalue = acc / (t_vec.size() - 2);
+			t_max_val = t_vec[t_vec.size() - 1];
+			t_min_val = t_vec[0];
+			for (int i = 0; i < lx.size();++i)
+			{
+				if (lx[i]==t_max_val)
 				{
-					erro=i;
+					t_max = i;
 				}
-				if (lx.at(mymax)<lx.at(i))
+				if (lx[i]==t_min_val)
 				{
-					mymax=i;
+					t_min = i;
 				}
 			}
+			if ((t_max_val-t_midvalue)>150)
+			{
+				mymax = t_max;
+			}
+			if ((t_midvalue-t_min_val)>150)
+			{
+				erro = t_min;
+			}
+		
 			for (int i=0;i<6;++i)
 			{
 				/*if ((lmax.at(i)-lx.at(i))>20 && (lmax.at(i)-lx.at(i)< 0.75 * w))
@@ -108,7 +132,7 @@ public:
 			}
 			if (q>0 && m>0)
 			{
-				jxc=q/m;
+				jxc=(q/m+0.5);
 				
 			}
 			if (k>=n-2)
@@ -118,20 +142,30 @@ public:
 				
 				for (int i=0;i<6;++i)
 				{
-					if (i!= erro && i!=mymax)
+					/*if (i!= erro && i!=mymax)
 					{
-						la.at(i)=lx.at(i);
-						lmax.at(i)=lx.at(i);
-					}
+					la.at(i)=lx.at(i);
+					lmax.at(i)=lx.at(i);
+					}*/
+					la.at(i) = lx.at(i);
+					lmax.at(i) = lx.at(i);
+				}
+			}
+			for (int i = 0; i < lmax.size(); ++i){
+				if ((lmax[i] - lx[i])>0.75*w)
+				{
+					lmax[i] = lx[i];
 				}
 			}
 			
-			StoryRing("e:\\123.txt",ring,jxc,lmax,la);
-			result+=to_string(jxc);
-			result+=to_string(ring);
-			result+=to_string(dr);
+			StoryRing("E:\\github\\TunnelManage\\result.txt",ring,jxc,lmax,la);
+			
 		}
-		
+		result += to_string(jxc);
+		result += ",";
+		result += to_string(ring);
+		result += ",";
+		result += to_string(dr);
 		return result;
 	}		
     static bool IntilRing(string filename,int & ring,int & jxc,vector<int> &lmax,vector <int> &la )

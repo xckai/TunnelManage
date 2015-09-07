@@ -89,7 +89,6 @@
   <ItemGroup>
     <ClCompile Include="..\TunnelManage\TunnelManage\base64.cpp" />
     <ClCompile Include="..\TunnelManage\TunnelManage\CPUID.cpp" />
-    <ClCompile Include="..\TunnelManage\TunnelManage\MyAuthorization.cpp" />
     <ClCompile Include="MyTester.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

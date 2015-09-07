@@ -38,9 +38,6 @@
     <ClCompile Include="MyTester.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="..\TunnelManage\TunnelManage\MyAuthorization.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="..\TunnelManage\TunnelManage\base64.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
