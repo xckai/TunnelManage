@@ -13,7 +13,7 @@ Authorization::Authorization()
 {
   a="c:\\windows\\system32\\yzyyzy.txt";
   b="c:\\shield\\monitor\\machin_coad.txt";
-  c="c:\\shield\\monitor\\soft_data\\ver_id.txt";
+  c="c:\\shield\\monitor\\ver_id.txt";
   a1="c:\\windows\\system32\\yangyupeng.txt";
 
 }
@@ -33,6 +33,7 @@ int Authorization::Authorized(){
 					CreateMyFile(a);
 					CreateMyFile(a1);
 					RemoveMyFile(c);
+					RemoveMyFile(b);
 					OutputDebugString(L"验证授权成功");
 					return 8;//ok
 				}
@@ -157,6 +158,10 @@ bool Authorization::IsAuthorized()
 int Authorization::CreateKeyFile(string fileName,string machineFile)
 {
 	try{
+		if (! IsFileExit(machineFile))
+		{
+			return 0;
+		}
 		Wow64EnableWow64FsRedirection(false);
 		SYSTEMTIME sysTime;
 		GetSystemTime(&sysTime);
@@ -175,7 +180,7 @@ int Authorization::CreateKeyFile(string fileName,string machineFile)
 		Wow64EnableWow64FsRedirection(true);
 		return 0;
 	}
-	catch (exception e)
+	catch (exception e)  
 	{
 		Wow64EnableWow64FsRedirection(true);
 		return -1;
