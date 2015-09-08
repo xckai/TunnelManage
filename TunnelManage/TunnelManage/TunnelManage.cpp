@@ -97,11 +97,11 @@ public:
 					t_min = i;
 				}
 			}
-			if ((t_max_val-t_midvalue)>150)
+			if ((t_max_val-t_midvalue)>100)
 			{
 				mymax = t_max;
 			}
-			if ((t_midvalue-t_min_val)>150)
+			if ((t_midvalue-t_min_val)>100)
 			{
 				erro = t_min;
 			}
@@ -161,6 +161,18 @@ public:
 			StoryRing("E:\\github\\TunnelManage\\result.txt",ring,jxc,lmax,la);
 			
 		}
+		cout <<"本次计算 erro为 ：" <<erro << " max 为： " << mymax << endl;
+		cout << "lmax的值分别为： ";
+		for (int i = 0; i < lmax.size();++i)
+		{
+			cout << lmax[i] << " ";
+		}
+		cout <<endl <<"la 的值为： ";
+		for (int i = 0; i < la.size();++i)
+		{
+			cout << la[i] << " ";
+		}
+		cout << endl;
 		result += to_string(jxc);
 		result += ",";
 		result += to_string(ring);

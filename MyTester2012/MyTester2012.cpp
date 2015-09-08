@@ -30,9 +30,10 @@ int _tmain(int argc, _TCHAR* argv[])
 			string resultstr1,str2;
 			ss >> resultstr1;
 			ss >> str2;
-			outfile << "Calculate result is : " << FunctionManage().RingCalcute6(lmax.at(0), lmax.at(1), lmax.at(2), lmax.at(3), lmax.at(4), lmax.at(5), lmax.at(6), lmax.at(7), lmax.at(8), lmax.at(9)) << setw(25)<<" Expect result is : " << resultstr1 << " " << str2 << "\r\n";
+			cout << "Calculate result is : " << FunctionManage().RingCalcute6(lmax.at(0), lmax.at(1), lmax.at(2), lmax.at(3), lmax.at(4), lmax.at(5), lmax.at(6), lmax.at(7), lmax.at(8), lmax.at(9)) << setw(25)<<" Expect result is : " << resultstr1 << " " << str2 << "\r\n";
+			cout << "---------------------------------------------" << endl;
 		}
-		outfile << "done";
+		cout << "done";
 		outfile.close();
 		cin >> str;
 		
