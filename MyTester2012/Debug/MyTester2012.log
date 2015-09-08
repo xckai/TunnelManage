@@ -1,22 +1,22 @@
-﻿生成启动时间为 2015/9/8 9:52:46。
+﻿生成启动时间为 2015/9/8 17:04:53。
      1>项目“E:\github\TunnelManage\MyTester2012\MyTester2012.vcxproj”在节点 2 上(Build 个目标)。
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\MyTester2012.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt MyTester2012.cpp
          MyTester2012.cpp
      1>e:\github\tunnelmanage\tunnelmanage\tunnelmanage\tunnelmanage.cpp(51): warning C4101: “e”: 未引用的局部变量
-     1>e:\github\tunnelmanage\tunnelmanage\tunnelmanage\tunnelmanage.cpp(82): warning C4018: “<”: 有符号/无符号不匹配
-     1>e:\github\tunnelmanage\tunnelmanage\tunnelmanage\tunnelmanage.cpp(86): warning C4244: “=”: 从“unsigned int”转换到“float”，可能丢失数据
-     1>e:\github\tunnelmanage\tunnelmanage\tunnelmanage\tunnelmanage.cpp(89): warning C4018: “<”: 有符号/无符号不匹配
-     1>e:\github\tunnelmanage\tunnelmanage\tunnelmanage\tunnelmanage.cpp(135): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
-     1>e:\github\tunnelmanage\tunnelmanage\tunnelmanage\tunnelmanage.cpp(154): warning C4018: “<”: 有符号/无符号不匹配
-     1>e:\github\tunnelmanage\tunnelmanage\tunnelmanage\tunnelmanage.cpp(166): warning C4018: “<”: 有符号/无符号不匹配
+     1>e:\github\tunnelmanage\tunnelmanage\tunnelmanage\tunnelmanage.cpp(87): warning C4018: “<”: 有符号/无符号不匹配
+     1>e:\github\tunnelmanage\tunnelmanage\tunnelmanage\tunnelmanage.cpp(91): warning C4244: “=”: 从“unsigned int”转换到“float”，可能丢失数据
+     1>e:\github\tunnelmanage\tunnelmanage\tunnelmanage\tunnelmanage.cpp(94): warning C4018: “<”: 有符号/无符号不匹配
+     1>e:\github\tunnelmanage\tunnelmanage\tunnelmanage\tunnelmanage.cpp(140): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+     1>e:\github\tunnelmanage\tunnelmanage\tunnelmanage\tunnelmanage.cpp(159): warning C4018: “<”: 有符号/无符号不匹配
      1>e:\github\tunnelmanage\tunnelmanage\tunnelmanage\tunnelmanage.cpp(171): warning C4018: “<”: 有符号/无符号不匹配
-     1>e:\github\tunnelmanage\tunnelmanage\tunnelmanage\tunnelmanage.cpp(192): warning C4018: “<”: 有符号/无符号不匹配
-     1>e:\github\tunnelmanage\tunnelmanage\tunnelmanage\tunnelmanage.cpp(196): warning C4018: “<”: 有符号/无符号不匹配
-     1>e:\github\tunnelmanage\tunnelmanage\tunnelmanage\tunnelmanage.cpp(207): warning C4018: “<”: 有符号/无符号不匹配
-     1>e:\github\tunnelmanage\tunnelmanage\tunnelmanage\tunnelmanage.cpp(211): warning C4018: “<”: 有符号/无符号不匹配
-     1>e:\github\tunnelmanage\tunnelmanage\tunnelmanage\tunnelmanage.cpp(234): warning C4018: “<”: 有符号/无符号不匹配
-     1>e:\github\tunnelmanage\tunnelmanage\tunnelmanage\tunnelmanage.cpp(240): warning C4018: “<”: 有符号/无符号不匹配
+     1>e:\github\tunnelmanage\tunnelmanage\tunnelmanage\tunnelmanage.cpp(176): warning C4018: “<”: 有符号/无符号不匹配
+     1>e:\github\tunnelmanage\tunnelmanage\tunnelmanage\tunnelmanage.cpp(197): warning C4018: “<”: 有符号/无符号不匹配
+     1>e:\github\tunnelmanage\tunnelmanage\tunnelmanage\tunnelmanage.cpp(201): warning C4018: “<”: 有符号/无符号不匹配
+     1>e:\github\tunnelmanage\tunnelmanage\tunnelmanage\tunnelmanage.cpp(212): warning C4018: “<”: 有符号/无符号不匹配
+     1>e:\github\tunnelmanage\tunnelmanage\tunnelmanage\tunnelmanage.cpp(216): warning C4018: “<”: 有符号/无符号不匹配
+     1>e:\github\tunnelmanage\tunnelmanage\tunnelmanage\tunnelmanage.cpp(239): warning C4018: “<”: 有符号/无符号不匹配
+     1>e:\github\tunnelmanage\tunnelmanage\tunnelmanage\tunnelmanage.cpp(245): warning C4018: “<”: 有符号/无符号不匹配
      1>e:\github\tunnelmanage\mytester2012\mytester2012.cpp(24): warning C4018: “<”: 有符号/无符号不匹配
      1>e:\github\tunnelmanage\mytester2012\mytester2012.cpp(11): warning C4101: “i”: 未引用的局部变量
        Link:
@@ -27,4 +27,4 @@
 
 生成成功。
 
-已用时间 00:00:01.39
+已用时间 00:00:01.08

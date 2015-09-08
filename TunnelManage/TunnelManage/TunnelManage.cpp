@@ -54,18 +54,23 @@ public:
 			return exceptionResult.size();
 		}
 	}
-	static string  RingCalcute6(int n,int w,int dr,int lxj,int l0,int l1,int l2,int l3,int l4,int l5){
+	static string  RingCalcute(int n,int w,int dr,int lxj,int l0,int l1,int l2,int l3,int l4,int l5){
 		int ring=0,jxc=0,erro=-1,mymax=-1,k=0;
 		float q = 0, m = 0;
 		string result="";
 		vector<int > lmax,la,lx;
-		lmax.resize(6);
-		la.resize(6);
+		lmax.resize(n);
+		la.resize(n);
 		IntilRing("E:\\github\\TunnelManage\\result.txt",ring,jxc,lmax,la);
+		lx.push_back(l0); lx.push_back(l1);
+		lx.push_back(l2); lx.push_back(l3);
+		if (6==n)
+		{
+			lx.push_back(l4); lx.push_back(l5);
+		}
 		
-		lx.push_back(l0);lx.push_back(l1);
-		lx.push_back(l2);lx.push_back(l3);
-		lx.push_back(l4);lx.push_back(l5);		
+		
+			
 		if (dr!=0 )
 		{
 			ring=dr;
@@ -106,7 +111,7 @@ public:
 				erro = t_min;
 			}
 		
-			for (int i=0;i<6;++i)
+			for (int i=0;i<n;++i)
 			{
 				/*if ((lmax.at(i)-lx.at(i))>20 && (lmax.at(i)-lx.at(i)< 0.75 * w))
 				{
@@ -142,13 +147,13 @@ public:
 				
 				for (int i=0;i<6;++i)
 				{
-					/*if (i!= erro && i!=mymax)
+					if (i!= erro && i!=mymax)
 					{
 					la.at(i)=lx.at(i);
 					lmax.at(i)=lx.at(i);
-					}*/
-					la.at(i) = lx.at(i);
-					lmax.at(i) = lx.at(i);
+					}
+					/*la.at(i) = lx.at(i);
+					lmax.at(i) = lx.at(i);*/
 				}
 			}
 			for (int i = 0; i < lmax.size(); ++i){
