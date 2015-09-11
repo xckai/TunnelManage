@@ -33,6 +33,7 @@ Partial Class Form1
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Btn_Authorized = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'GapCal
@@ -126,11 +127,21 @@ Partial Class Form1
         Me.Button1.Text = "生成授权文件"
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(491, 168)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.TabIndex = 11
+        Me.Button2.Text = "推进计算"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(598, 261)
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Btn_Authorized)
         Me.Controls.Add(Me.Label4)
@@ -159,5 +170,6 @@ Partial Class Form1
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Btn_Authorized As System.Windows.Forms.Button
     Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents Button2 As System.Windows.Forms.Button
 
 End Class

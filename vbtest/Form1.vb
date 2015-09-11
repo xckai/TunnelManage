@@ -6,13 +6,14 @@ Public Class Form1
     End Function
     <DllImport("E:\github\TunnelManage\TunnelManage\Debug\TunnelManage.dll", CharSet:=CharSet.Unicode, SetLastError:=True, BestFitMapping:=False, CallingConvention:=CallingConvention.Cdecl)> Public Shared Function Authorized() As Int32
 
-        'a 已经授权过的文件 c:\windows\system32\yzyyzy.txt
-        'b 机器码文件 c:\shield\monitor\machin_coad.txt
-        'c 经过授权的文件 c:\shield\monitor\soft_data\ver_id.txt
+       
 
 
     End Function
     <DllImport("E:\github\TunnelManage\TunnelManage\Debug\TunnelManage.dll", CharSet:=CharSet.Unicode, SetLastError:=True, BestFitMapping:=False, CallingConvention:=CallingConvention.Cdecl)> Public Shared Function CreateKey(ByVal a As String, ByVal b As String) As Int32
+
+    End Function
+    <DllImport("E:\github\TunnelManage\TunnelManage\Debug\TunnelManage.dll", CharSet:=CharSet.Unicode, SetLastError:=True, BestFitMapping:=False, CallingConvention:=CallingConvention.Cdecl)> Public Shared Function RingCalculate(ByVal n As Int32, ByVal w As Int32, ByVal dr As Int32, ByVal lxj As Int32, ByVal l0 As Int32, ByVal l1 As Int32, ByVal l2 As Int32, ByVal l3 As Int32, ByVal l4 As Int32, ByVal l5 As Int32, ByVal resultStr As String) As Int32
 
     End Function
     Private Sub GapCal_Click(sender As Object, e As EventArgs) Handles GapCal.Click
@@ -37,5 +38,18 @@ Public Class Form1
 
     Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
         Dim result = CreateKey("c:\shield\monitor\soft_data\ver_id.txt", "c:\shield\monitor\machin_coad.txt")
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+       
+        Dim resultStr As String
+        resultStr = Space(128)
+        Dim charNum = RingCalculate(4, 1200, 5, 1, 500, 500, 500, 2500, 0, 0, resultStr)
+        resultStr = Microsoft.VisualBasic.Left(resultStr, charNum)
+        Dim strList = resultStr.Split(",")
+        Dim ring = Convert.ToInt32(strList(0))
+        Dim jxc = Convert.ToInt32(strList(1))
+        Dim dr = Convert.ToInt32(strList(2))
+        MessageBox.Show("ring is " + ring.ToString() + "; jxc is " + jxc.ToString() + "; dr is " + dr.ToString())
     End Sub
 End Class
