@@ -14,8 +14,6 @@ int _tmain(int argc, _TCHAR* argv[])
 		
 		vector<int> lmax;
 		lmax.resize(10);
-		
-		
 		ifstream File("E:\\github\\TunnelManage\\test.txt", ofstream::in | ofstream::binary);
 		ofstream outfile("E:\\github\\TunnelManage\\testresult.txt", ofstream::out | ofstream::binary);
 		string str;
