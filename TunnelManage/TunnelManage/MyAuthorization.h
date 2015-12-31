@@ -26,7 +26,7 @@ private:
 	bool CreateMyFile(const string fileName,string content="");
 	bool RemoveMyFile(const string str);
 	bool CheckVerIdFile();
-	string a, b, c,a1;
+	string a, b, c,a1,floder1,floder2,admin;
 	
 };
 #endif

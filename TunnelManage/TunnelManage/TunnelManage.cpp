@@ -10,9 +10,18 @@
 #include "MyAuthorization.h"
 #include <vector>
 #include<algorithm>
+#include<sstream>
 
 using namespace std;
+template<class T>
+wstring GetWstring(const T &t ){
+wstringstream ss;
+ss<<t;
+wstring temp;
+ss>>temp;
+return temp;
 
+}
 class FunctionManage
 {
 public:
@@ -36,9 +45,9 @@ public:
 				float _k=(r+l)/w;
 				float _d=(r-l)/(2*_k);
 				float _x=x+_d;
-				result += to_wstring(_d);
+				result += GetWstring(_d);
 				result += L",";
-				result += to_wstring(_x);
+				result += GetWstring(_x);
 				lstrcpyW(resultBuffer, result.c_str());
 				int t = result.size();
 				return result.size()+1;
@@ -171,16 +180,17 @@ public:
 					}
 
 					StoryRing(file, ring, jxc, lmax, la);
-					result += to_wstring(ring);
+					result += GetWstring(ring);
 					result += L",";
-					result += to_wstring(jxc);
+					result += GetWstring(jxc);
 					result += L",";
 					
-					result += to_wstring(dr);
+					result += GetWstring(dr);
 				}
 				else {
 					result = exceptionResult;
 					result += L",9991";
+					//lxj 没有推进 
 				}
 				//cout <<"本次计算 erro为 ：" <<erro << " max 为： " << mymax << endl;
 				//cout << "lmax的值分别为： ";
@@ -199,6 +209,7 @@ public:
 			else {
 				result = exceptionResult;
 				result += L",9999";
+				//未授权
 			}
 
 		}
@@ -206,7 +217,7 @@ public:
 		{
 			result = exceptionResult;
 			result += L",9990";
-			
+			//异常
 		}
 		
 		lstrcpyW(resultBuffer, result.c_str());

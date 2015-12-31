@@ -1,19 +1,19 @@
 ﻿Imports System.Runtime.InteropServices
 Public Class Form1
-    <DllImport("E:\github\TunnelManage\TunnelManage\Debug\TunnelManage.dll", CharSet:=CharSet.Unicode, SetLastError:=True, BestFitMapping:=False, CallingConvention:=CallingConvention.Cdecl)> Public Shared Function GapCalculate(ByVal w As Int32, ByVal x As Int32, ByVal l As Single, ByVal r As Single, ByVal resultStr As String) As Int32
+    <DllImport("TunnelManage.dll", CharSet:=CharSet.Unicode, SetLastError:=True, BestFitMapping:=False, CallingConvention:=CallingConvention.Cdecl)> Public Shared Function GapCalculate(ByVal w As Int32, ByVal x As Int32, ByVal l As Single, ByVal r As Single, ByVal resultStr As String) As Int32
 
 
     End Function
-    <DllImport("E:\github\TunnelManage\TunnelManage\Debug\TunnelManage.dll", CharSet:=CharSet.Unicode, SetLastError:=True, BestFitMapping:=False, CallingConvention:=CallingConvention.Cdecl)> Public Shared Function Authorized() As Int32
-
-       
+    <DllImport("TunnelManage.dll", CharSet:=CharSet.Unicode, SetLastError:=True, BestFitMapping:=False, CallingConvention:=CallingConvention.Cdecl)> Public Shared Function Authorized() As Int32
 
 
-    End Function
-    <DllImport("E:\github\TunnelManage\TunnelManage\Debug\TunnelManage.dll", CharSet:=CharSet.Unicode, SetLastError:=True, BestFitMapping:=False, CallingConvention:=CallingConvention.Cdecl)> Public Shared Function CreateKey(ByVal a As String, ByVal b As String) As Int32
+
 
     End Function
-    <DllImport("E:\github\TunnelManage\TunnelManage\Debug\TunnelManage.dll", CharSet:=CharSet.Unicode, SetLastError:=True, BestFitMapping:=False, CallingConvention:=CallingConvention.Cdecl)> Public Shared Function RingCalculate(ByVal n As Int32, ByVal w As Int32, ByVal dr As Int32, ByVal lxj As Int32, ByVal l0 As Int32, ByVal l1 As Int32, ByVal l2 As Int32, ByVal l3 As Int32, ByVal l4 As Int32, ByVal l5 As Int32, ByVal resultStr As String) As Int32
+    <DllImport("TunnelManage.dll", CharSet:=CharSet.Unicode, SetLastError:=True, BestFitMapping:=False, CallingConvention:=CallingConvention.Cdecl)> Public Shared Function CreateKey(ByVal a As String, ByVal b As String) As Int32
+
+    End Function
+    <DllImport("TunnelManage.dll", CharSet:=CharSet.Unicode, SetLastError:=True, BestFitMapping:=False, CallingConvention:=CallingConvention.Cdecl)> Public Shared Function RingCalculate(ByVal n As Int32, ByVal w As Int32, ByVal dr As Int32, ByVal lxj As Int32, ByVal l0 As Int32, ByVal l1 As Int32, ByVal l2 As Int32, ByVal l3 As Int32, ByVal l4 As Int32, ByVal l5 As Int32, ByVal resultStr As String) As Int32
 
     End Function
     Private Sub GapCal_Click(sender As Object, e As EventArgs) Handles GapCal.Click

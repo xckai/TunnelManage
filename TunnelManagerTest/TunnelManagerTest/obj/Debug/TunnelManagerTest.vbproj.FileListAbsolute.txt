@@ -1,0 +1,10 @@
+C:\Users\狂奔De蜗牛\Desktop\TunnelManagerTest\TunnelManagerTest\bin\Debug\TunnelManagerTest.exe
+C:\Users\狂奔De蜗牛\Desktop\TunnelManagerTest\TunnelManagerTest\bin\Debug\TunnelManagerTest.pdb
+C:\Users\狂奔De蜗牛\Desktop\TunnelManagerTest\TunnelManagerTest\bin\Debug\TunnelManagerTest.xml
+C:\Users\狂奔De蜗牛\Desktop\TunnelManagerTest\TunnelManagerTest\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\狂奔De蜗牛\Desktop\TunnelManagerTest\TunnelManagerTest\obj\Debug\TunnelManagerTest.Form1.resources
+C:\Users\狂奔De蜗牛\Desktop\TunnelManagerTest\TunnelManagerTest\obj\Debug\TunnelManagerTest.Resources.resources
+C:\Users\狂奔De蜗牛\Desktop\TunnelManagerTest\TunnelManagerTest\obj\Debug\TunnelManagerTest.vbproj.GenerateResource.Cache
+C:\Users\狂奔De蜗牛\Desktop\TunnelManagerTest\TunnelManagerTest\obj\Debug\TunnelManagerTest.exe
+C:\Users\狂奔De蜗牛\Desktop\TunnelManagerTest\TunnelManagerTest\obj\Debug\TunnelManagerTest.xml
+C:\Users\狂奔De蜗牛\Desktop\TunnelManagerTest\TunnelManagerTest\obj\Debug\TunnelManagerTest.pdb

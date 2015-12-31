@@ -3,6 +3,7 @@
 #include "CPUID.h"
 #include "StringEncode.h"
 #include <windows.h>
+#include<direct.h>
 Authorization::Authorization( string _a, string _b, string _c)
 { 
 	a =_a;
@@ -15,17 +16,31 @@ Authorization::Authorization()
   b="c:\\shield\\monitor\\machin_coad.txt";
   c="c:\\shield\\monitor\\ver_id.txt";
   a1="c:\\windows\\system32\\yangyupeng.txt";
-
+  admin="c:\\windows\\system32\\yhyyhy.txt";
 }
 int Authorization::Authorized(){
 	try {
+		mkdir("c:\\shield");
+		mkdir("c:\\shield\\monitor");
 		//a 主文件,b 机器码文件, c 授权文件
 		if (IsFileExit(a))
 		{
 			OutputDebugString(L"已经过授权");
+			if(IsFileExit(admin)&&IsFileExit(b)){
+			mkdir("c:\\shield\\monitor\\soft_data");
+			SYSTEMTIME sysTime;
+				GetSystemTime(&sysTime);
+				stringstream ss;
+				ss << sysTime.wYear << sysTime.wMonth << sysTime.wDay<<sysTime.wHour<<sysTime.wMinute<<sysTime.wSecond;
+				string myTime = ss.str();
+				string filename="c:\\shield\\monitor\\soft_data\\ver_id.txt"+myTime;
+				CreateKeyFile(filename,b);
+			}
 			return 8;
 		}
 		else{
+		
+			
 			if (IsFileExit(c))//授权文件存在
 			{
 				if (CheckVerIdFile())//验证授权
@@ -123,6 +138,8 @@ bool Authorization::IsFileExit(const string name)
 bool Authorization::CreateMyFile(const string str,string content)
 {
 	Wow64EnableWow64FsRedirection(FALSE);
+
+
 	ofstream outFile(str.c_str(), ofstream::out | ofstream::binary);
 	if (outFile)
 	{
@@ -175,8 +192,10 @@ int Authorization::CreateKeyFile(string fileName,string machineFile)
 		//string myEncodeStr = base64_encode(reinterpret_cast<const unsigned char*>(myStr.c_str()), myStr.length());
 		string myEncodeStr= StringEncode().base64_encode(myStr);
 		myEncodeStr += "@!$%c";
-		cout << myStr;
+		//cout << myStr;
 		CreateMyFile(fileName, myEncodeStr);
+		myInfile.close();
+		RemoveMyFile(machineFile);
 		Wow64EnableWow64FsRedirection(true);
 		return 0;
 	}

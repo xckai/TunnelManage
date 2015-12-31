@@ -30,13 +30,13 @@ extern"C"_declspec(dllexport) int  Authorized()
 	Authorization auth;
 	return auth.Authorized();
 }
-extern"C"_declspec(dllexport)int CreateKey(LPCWSTR a, LPCWSTR b)
-{ //a 读取机器码的路径 b 生成key的路径
-	string _a = ws2s((wstring)a);
-	string _b = ws2s((wstring)b);
-	Authorization auth;
-	return auth.CreateKeyFile(_a, _b);
-}
+//extern"C"_declspec(dllexport)int CreateKey(LPCWSTR a, LPCWSTR b)
+//{ //a 读取机器码的路径 b 生成key的路径
+//	string _a = ws2s((wstring)a);
+//	string _b = ws2s((wstring)b);
+//	Authorization auth;
+//	return auth.CreateKeyFile(_a, _b);
+//}
 extern"C"_declspec(dllexport)int RingCalculate(int n, int w, int dr, int lxj, int l0, int l1, int l2, int l3, int l4, int l5, WCHAR *resultBuffer) {
 	return functionManage.RingCalculate(n,w,dr,lxj,l0,l1,l2,l3,l4,l5,resultBuffer);
 }

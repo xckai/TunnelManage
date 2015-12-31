@@ -1,18 +1,60 @@
-﻿生成启动时间为 2015-9-3 16:39:11。
-     1>项目“E:\github\TunnelManage\TunnelManage\TunnelManage\TunnelManage.vcxproj”在节点 2 上(Build 个目标)。
-       项目文件包含 ToolsVersion="12.0"。此工具集可能未知或缺失。在这种情况下，通过安装 MSBuild 的正确版本，或许可以解决此问题。否则，该 build 可能已因策略原因而被强制为某个特定 ToolsVersion。将该项目视为其已具有 ToolsVersion="4.0"。有关详细信息，请参阅 http://go.microsoft.com/fwlink/?LinkId=291333。
-     1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _WINDOWS /D _USRDLL /D TUNNELMANAGE_EXPORTS /D _WINDLL /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Release\TunnelManage.pch" /Fo"Release\\" /Fd"Release\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt TunnelManage.cpp
+﻿生成启动时间为 2015/12/31 9:16:10。
+     1>项目“C:\Desktop\TunnelManage\TunnelManage\TunnelManage\TunnelManage.vcxproj”在节点 2 上(rebuild 个目标)。
+       项目文件包含 ToolsVersion="12.0" 设置，而此版本的 MSBuild 不支持该工具版本。该项目将视为包含 ToolsVersion="4.0" 设置。
+     1>_PrepareForClean:
+         正在删除文件“Release\TunnelManage.lastbuildstate”。
+       InitializeBuildStatus:
+         正在创建“Release\TunnelManage.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+       ClCompile:
+         C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _WINDOWS /D _USRDLL /D TUNNELMANAGE_EXPORTS /D _WINDLL /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yc"StdAfx.h" /Fp"Release\TunnelManage.pch" /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
+         stdafx.cpp
+         C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _WINDOWS /D _USRDLL /D TUNNELMANAGE_EXPORTS /D _WINDLL /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Release\TunnelManage.pch" /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt base64.cpp CPUID.cpp DLLOUT.cpp MyAuthorization.cpp StringEncode.cpp TunnelManage.cpp
+         base64.cpp
+         CPUID.cpp
+     1>CPUID.cpp(65): warning C4018: “<”: 有符号/无符号不匹配
+         DLLOUT.cpp
+     1>c:\desktop\tunnelmanage\tunnelmanage\tunnelmanage\TunnelManage.cpp(60): warning C4101: “e”: 未引用的局部变量
+     1>c:\desktop\tunnelmanage\tunnelmanage\tunnelmanage\TunnelManage.cpp(103): warning C4018: “<”: 有符号/无符号不匹配
+     1>c:\desktop\tunnelmanage\tunnelmanage\tunnelmanage\TunnelManage.cpp(107): warning C4244: “=”: 从“unsigned int”转换到“float”，可能丢失数据
+     1>c:\desktop\tunnelmanage\tunnelmanage\tunnelmanage\TunnelManage.cpp(110): warning C4018: “<”: 有符号/无符号不匹配
+     1>c:\desktop\tunnelmanage\tunnelmanage\tunnelmanage\TunnelManage.cpp(156): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+     1>c:\desktop\tunnelmanage\tunnelmanage\tunnelmanage\TunnelManage.cpp(175): warning C4018: “<”: 有符号/无符号不匹配
+     1>c:\desktop\tunnelmanage\tunnelmanage\tunnelmanage\TunnelManage.cpp(216): warning C4101: “e”: 未引用的局部变量
+     1>c:\desktop\tunnelmanage\tunnelmanage\tunnelmanage\TunnelManage.cpp(235): warning C4018: “<”: 有符号/无符号不匹配
+     1>c:\desktop\tunnelmanage\tunnelmanage\tunnelmanage\TunnelManage.cpp(239): warning C4018: “<”: 有符号/无符号不匹配
+     1>c:\desktop\tunnelmanage\tunnelmanage\tunnelmanage\TunnelManage.cpp(250): warning C4018: “<”: 有符号/无符号不匹配
+     1>c:\desktop\tunnelmanage\tunnelmanage\tunnelmanage\TunnelManage.cpp(254): warning C4018: “<”: 有符号/无符号不匹配
+     1>c:\desktop\tunnelmanage\tunnelmanage\tunnelmanage\TunnelManage.cpp(277): warning C4018: “<”: 有符号/无符号不匹配
+     1>c:\desktop\tunnelmanage\tunnelmanage\tunnelmanage\TunnelManage.cpp(283): warning C4018: “<”: 有符号/无符号不匹配
+         MyAuthorization.cpp
+     1>MyAuthorization.cpp(23): warning C4996: 'mkdir': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _mkdir. See online help for details.
+                 C:\Program Files\Microsoft Visual Studio 10.0\VC\include\direct.h(124) : 参见“mkdir”的声明
+     1>MyAuthorization.cpp(24): warning C4996: 'mkdir': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _mkdir. See online help for details.
+                 C:\Program Files\Microsoft Visual Studio 10.0\VC\include\direct.h(124) : 参见“mkdir”的声明
+     1>MyAuthorization.cpp(30): warning C4996: 'mkdir': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _mkdir. See online help for details.
+                 C:\Program Files\Microsoft Visual Studio 10.0\VC\include\direct.h(124) : 参见“mkdir”的声明
+     1>MyAuthorization.cpp(93): warning C4018: “<”: 有符号/无符号不匹配
+     1>MyAuthorization.cpp(99): warning C4018: “<”: 有符号/无符号不匹配
+     1>MyAuthorization.cpp(109): warning C4018: “<”: 有符号/无符号不匹配
+         StringEncode.cpp
          TunnelManage.cpp
-     1>TunnelManage.cpp(50): warning C4101: “e”: 未引用的局部变量
-     1>TunnelManage.cpp(143): warning C4018: “<”: 有符号/无符号不匹配
-     1>TunnelManage.cpp(147): warning C4018: “<”: 有符号/无符号不匹配
-     1>TunnelManage.cpp(158): warning C4018: “<”: 有符号/无符号不匹配
-     1>TunnelManage.cpp(162): warning C4018: “<”: 有符号/无符号不匹配
-     1>TunnelManage.cpp(185): warning C4018: “<”: 有符号/无符号不匹配
-     1>TunnelManage.cpp(191): warning C4018: “<”: 有符号/无符号不匹配
+     1>TunnelManage.cpp(60): warning C4101: “e”: 未引用的局部变量
+     1>TunnelManage.cpp(103): warning C4018: “<”: 有符号/无符号不匹配
+     1>TunnelManage.cpp(107): warning C4244: “=”: 从“unsigned int”转换到“float”，可能丢失数据
+     1>TunnelManage.cpp(110): warning C4018: “<”: 有符号/无符号不匹配
+     1>TunnelManage.cpp(156): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+     1>TunnelManage.cpp(175): warning C4018: “<”: 有符号/无符号不匹配
+     1>TunnelManage.cpp(216): warning C4101: “e”: 未引用的局部变量
+     1>TunnelManage.cpp(235): warning C4018: “<”: 有符号/无符号不匹配
+     1>TunnelManage.cpp(239): warning C4018: “<”: 有符号/无符号不匹配
+     1>TunnelManage.cpp(250): warning C4018: “<”: 有符号/无符号不匹配
+     1>TunnelManage.cpp(254): warning C4018: “<”: 有符号/无符号不匹配
+     1>TunnelManage.cpp(277): warning C4018: “<”: 有符号/无符号不匹配
+     1>TunnelManage.cpp(283): warning C4018: “<”: 有符号/无符号不匹配
+         C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _WINDOWS /D _USRDLL /D TUNNELMANAGE_EXPORTS /D _WINDLL /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt dllmain.cpp
+         dllmain.cpp
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\github\TunnelManage\TunnelManage\Release\TunnelManage.dll" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\github\TunnelManage\TunnelManage\Release\TunnelManage.pdb" /SUBSYSTEM:WINDOWS /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\github\TunnelManage\TunnelManage\Release\TunnelManage.lib" /MACHINE:X86 /SAFESEH /DLL Release\base64.obj
+         C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Desktop\TunnelManage\TunnelManage\TunnelManage\Release\TunnelManage.dll" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Release\TunnelManage.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Desktop\TunnelManage\TunnelManage\TunnelManage\Release\TunnelManage.pdb" /SUBSYSTEM:WINDOWS /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Desktop\TunnelManage\TunnelManage\TunnelManage\Release\TunnelManage.lib" /MACHINE:X86 /DLL Release\base64.obj
          Release\CPUID.obj
          Release\DLLOUT.obj
          Release\MyAuthorization.obj
@@ -20,12 +62,17 @@
          Release\stdafx.obj
          Release\StringEncode.obj
          Release\TunnelManage.obj
-            正在创建库 E:\github\TunnelManage\TunnelManage\Release\TunnelManage.lib 和对象 E:\github\TunnelManage\TunnelManage\Release\TunnelManage.exp
+            正在创建库 C:\Desktop\TunnelManage\TunnelManage\TunnelManage\Release\TunnelManage.lib 和对象 C:\Desktop\TunnelManage\TunnelManage\TunnelManage\Release\TunnelManage.exp
          正在生成代码
          已完成代码的生成
-         TunnelManage.vcxproj -> E:\github\TunnelManage\TunnelManage\Release\TunnelManage.dll
-     1>已完成生成项目“E:\github\TunnelManage\TunnelManage\TunnelManage\TunnelManage.vcxproj”(Build 个目标)的操作。
+         TunnelManage.vcxproj -> C:\Desktop\TunnelManage\TunnelManage\TunnelManage\Release\TunnelManage.dll
+       Manifest:
+         C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\Desktop\TunnelManage\TunnelManage\TunnelManage\Release\TunnelManage.dll;#2" /manifest Release\TunnelManage.dll.intermediate.manifest
+       FinalizeBuildStatus:
+         正在删除文件“Release\TunnelManage.unsuccessfulbuild”。
+         正在对“Release\TunnelManage.lastbuildstate”执行 Touch 任务。
+     1>已完成生成项目“C:\Desktop\TunnelManage\TunnelManage\TunnelManage\TunnelManage.vcxproj”(rebuild 个目标)的操作。
 
 生成成功。
 
-已用时间 00:00:01.81
+已用时间 00:00:06.90
